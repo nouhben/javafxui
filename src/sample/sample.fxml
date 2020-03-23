@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <AnchorPane prefHeight="700.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="50.0" layoutY="40.0" prefHeight="20.0" prefWidth="150.0" text="Marque:" textFill="#4d4848">
+                    <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                    </font>
+                </Label>
+                <JFXComboBox fx:id="marqueID" layoutX="300.0" layoutY="30.0" prefHeight="30.0" prefWidth="250.0" promptText="--choisir une voiture --" />
+                <Label layoutX="50.0" layoutY="250.0" prefHeight="20.0" prefWidth="150.0" text="Couleur:">
+                    <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                    </font>
+                </Label>
+                <JFXComboBox fx:id="color1ID" layoutX="300.0" layoutY="240.0" prefHeight="30.0" prefWidth="168.0" promptText="-- couleur interieure --" />
+                <JFXButton fx:id="confirmBtn" layoutX="300.0" layoutY="684.0" onAction="#confirm" prefHeight="36.0" prefWidth="206.0" style="-fx-text-fill: #FFF; -fx-background-color: rgb(10,50,250);" text="Confirmer">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font></JFXButton>
+                <Label fx:id="color1Err" layoutX="302.0" layoutY="270.0" prefHeight="20.0" prefWidth="168.0" style="-fx-text-fill: #FF00FF;" />
+                <Label layoutX="50.0" layoutY="110.0" prefHeight="20.0" prefWidth="150.0" text="Modele:" textFill="#4d4848">
+                    <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                    </font>
+                </Label>
+                <JFXComboBox fx:id="modelID" disable="true" layoutX="300.0" layoutY="90.0" prefHeight="30.0" prefWidth="250.0" promptText="--choisir une modele --" />
+                <Label layoutX="50.0" layoutY="180.0" prefHeight="20.0" prefWidth="150.0" text="Annee:">
+                    <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="modelErr" layoutX="300.0" layoutY="120.0" prefHeight="20.0" prefWidth="300.0" style="-fx-text-fill: #FF00FF;" />
+                <Label fx:id="marqueErr" layoutX="300.0" layoutY="60.0" prefHeight="20.0" prefWidth="300.0" style="-fx-text-fill: #FF00FF;" />
+                <Label layoutX="50.0" layoutY="310.0" prefHeight="20.0" prefWidth="150.0" text="Portes:">
+                    <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                    </font>
+                </Label>
+                <JFXComboBox fx:id="portesID" layoutX="300.0" layoutY="300.0" prefHeight="30.0" prefWidth="250.0" promptText="--nombre de ports--" />
+                <Label fx:id="portErr" layoutX="305.0" layoutY="330.0" prefHeight="20.0" prefWidth="300.0" style="-fx-text-fill: #FF00FF;" />
+                <Label fx:id="yearErr" layoutX="300.0" layoutY="200.0" prefHeight="20.0" prefWidth="300.0" style="-fx-text-fill: #FF00FF;" />
+                <Label layoutX="45.0" layoutY="380.0" prefHeight="20.0" prefWidth="150.0" text="Kilometrage:">
+                    <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                    </font>
+                </Label>
+                <JFXComboBox fx:id="kmID" layoutX="295.0" layoutY="370.0" prefHeight="30.0" prefWidth="250.0" promptText="-- kilometrage --" />
+                <Label layoutX="50.0" layoutY="467.0" prefHeight="20.0" prefWidth="156.0" text="Type de Conducteur:">
+                    <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="conductTypeErr" layoutX="300.0" layoutY="487.0" prefHeight="20.0" prefWidth="300.0" style="-fx-text-fill: #FF00FF;" />
+                <Label fx:id="kmErr" layoutX="295.0" layoutY="400.0" prefHeight="20.0" prefWidth="300.0" style="-fx-text-fill: #FF00FF;" />
+                <Label layoutX="50.0" layoutY="610.0" prefHeight="20.0" prefWidth="150.0" text="Type d'energie:">
+                    <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                    </font>
+                </Label>
+                <JFXComboBox fx:id="fuelTypeID" layoutX="300.0" layoutY="610.0" prefHeight="30.0" prefWidth="250.0" promptText="-- Energie --" />
+                <Label fx:id="fuelTypeErr" layoutX="300.0" layoutY="640.0" prefHeight="20.0" prefWidth="300.0" style="-fx-text-fill: #FF00FF;" />
+                <JFXRadioButton layoutX="300.0" layoutY="467.0" text="AWD/4WD">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="typeConduct" />
+                    </toggleGroup>
+                </JFXRadioButton>
+                <JFXRadioButton layoutX="550.0" layoutY="467.0" text="Tr. Arriere" toggleGroup="$typeConduct" />
+                <JFXRadioButton layoutX="430.0" layoutY="467.0" text="Tr. Avant" toggleGroup="$typeConduct" />
+                <JFXComboBox fx:id="color2ID" layoutX="500.0" layoutY="240.0" prefHeight="30.0" prefWidth="168.0" promptText="-- couleur exterieure --" />
+                <Label layoutX="50.0" layoutY="550.0" prefHeight="20.0" prefWidth="150.0" text="Transmission:">
+                    <font>
+                        <Font name="SansSerif Bold" size="15.0" />
+                    </font>
+                </Label>
+                <JFXRadioButton layoutX="300.0" layoutY="550.0" text="Auto">
+               <toggleGroup>
+                  <ToggleGroup fx:id="transmission" />
+               </toggleGroup>
+                </JFXRadioButton>
+                <JFXRadioButton layoutX="430.0" layoutY="550.0" text="Manuel" toggleGroup="$transmission" />
+                <JFXComboBox fx:id="yearID" layoutX="300.0" layoutY="170.0" prefHeight="30.0" prefWidth="250.0" promptText="--choisir une modele --" />
+                <Label fx:id="color2Err" layoutX="503.0" layoutY="270.0" prefHeight="20.0" prefWidth="168.0" style="-fx-text-fill: #FF00FF;" />
+                <Label fx:id="transmissionErr" layoutX="300.0" layoutY="565.0" prefHeight="20.0" prefWidth="300.0" style="-fx-text-fill: #FF00FF;" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
